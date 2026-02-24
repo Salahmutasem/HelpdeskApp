@@ -1,0 +1,52 @@
+@model List<Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Categories</h2>
+    <a asp-action="Create" class="btn btn-primary">Create New Category</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Active</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cat in Model)
+        {
+            <tr>
+                <td>@cat.Name</td>
+                <td>
+                    @if (cat.IsActive)
+                    {
+                        <span class="badge bg-success">Active</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactive</span>
+                    }
+                </td>
+                <td>@cat.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    <form asp-action="ToggleActive" asp-route-id="@cat.Id" method="post" style="display:inline;">
+                        @if (cat.IsActive)
+                        {
+                            <button type="submit" class="btn btn-sm btn-warning">Deactivate</button>
+                        }
+                        else
+                        {
+                            <button type="submit" class="btn btn-sm btn-success">Activate</button>
+                        }
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
