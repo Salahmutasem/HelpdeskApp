@@ -12,7 +12,7 @@ sqlcmd -S localhost -U sa -P 'Salah@123!' -N disable -i Docker/init-db.sql
 echo "Done! You can now run: dotnet run"
 ```
 
-But for daily work, you just need:
+But for daily work, we just need:
 ```
 docker compose up -d
 dotnet run

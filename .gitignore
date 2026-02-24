@@ -1,0 +1,23 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# Secrets (keep passwords off GitHub)
+appsettings.Development.json
+
+# macOS files
+.DS_Store
+
+# Docker data
+sqldata/
+
+# Setup script (has password)
+setup.sh
