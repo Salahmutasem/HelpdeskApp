@@ -6,7 +6,7 @@ A simple helpdesk ticketing web application where employees can create support t
 
 ## Tech Stack
 
-- **Backend:** ASP.NET Core MVC (.NET 8)
+- **Backend:** ASP.NET Core MVC (.NET 10)
 - **Database:** SQL Server (Azure SQL Edge via Docker)
 - **Data Access:** ADO.NET (SqlConnection, SqlCommand, SqlDataReader)
 - **Frontend:** Razor Views with Bootstrap 5
@@ -37,7 +37,7 @@ A simple helpdesk ticketing web application where employees can create support t
 
 Make sure you have the following installed:
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - sqlcmd (install on Mac with `brew install sqlcmd`)
 
@@ -110,7 +110,7 @@ Open your browser at the URL shown in the terminal (e.g. `http://localhost:5282`
 | Email              | Password  |
 | ------------------ | --------- |
 | admin@helpdesk.com | Admin@123 |
-| john@helpdesk.com  | Test@1234 |
+| salah@helpdesk.com | Test@1234 |
 
 ---
 
@@ -145,7 +145,6 @@ HelpdeskApp/
 │   └── _ViewStart.cshtml        - Sets the default layout
 ├── Docker/
 │   ├── init-db.sql              - SQL script to create database and seed data
-│   └── init.py                  - Python script for auto database init
 ├── database-script.sql          - Standalone SQL script (deliverable)
 ├── docker-compose.yml           - Docker Compose config for SQL Server
 ├── appsettings.json             - App configuration (placeholder password)

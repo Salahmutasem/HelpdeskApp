@@ -133,3 +133,4 @@
 /Users/salahmutasem/Desktop/HelpdeskApp/obj/Debug/net10.0/HelpdeskApp.pdb
 /Users/salahmutasem/Desktop/HelpdeskApp/obj/Debug/net10.0/HelpdeskApp.genruntimeconfig.cache
 /Users/salahmutasem/Desktop/HelpdeskApp/obj/Debug/net10.0/ref/HelpdeskApp.dll
+/Users/salahmutasem/Desktop/HelpdeskApp/obj/Debug/net10.0/HelpdeskApp.sourcelink.json

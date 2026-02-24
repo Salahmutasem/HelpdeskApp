@@ -12,9 +12,10 @@ namespace HelpdeskApp.Models
 
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Please enter a valid email")]
+        [RegularExpression(@"^[a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?@[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$",
+            ErrorMessage = "Please enter a valid email address (e.g. user@example.com)")]
         public string Email { get; set; } = "";
 
-        // We store the password as plain text for simplicity (assignment allows PasswordPlain)
         [Required(ErrorMessage = "Password is required")]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$",
             ErrorMessage = "Password must be at least 8 characters with uppercase, lowercase, number, and special character")]
